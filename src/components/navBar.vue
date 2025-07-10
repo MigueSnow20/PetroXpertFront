@@ -1,6 +1,5 @@
 <template>
   <nav class="navbar">
-    <div class="navbar-title">P E T R O X P E R T</div>
   </nav>
 </template>
 
