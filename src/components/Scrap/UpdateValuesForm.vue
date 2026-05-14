@@ -96,23 +96,30 @@ export default {
         const cierreResponse = await axios.get("https://petroxpertbackend.fly.dev/cierre-ultimo");
         console.log(cierreResponse);
         if (cierreResponse.data && cierreResponse.data.id) {
-          Object.keys(cierreResponse.data).forEach(key => {
-            if (key !== "id" && key !== "created_at") {
-              cierreResponse.data[key] = parseFloat(cierreResponse.data[key]);
-            }
-          });
-          this.formData.cierre = { ...cierreResponse.data };
-          delete this.formData.cierre.id;
-          delete this.formData.cierre.created_at;
+
+        this.formData.cierre = {
+          ice: parseFloat(cierreResponse.data.ice),
+          deltaMed: parseFloat(cierreResponse.data.deltamed),
+          deltaNWE: parseFloat(cierreResponse.data.deltanwe),
+          divisa: parseFloat(cierreResponse.data.divisa),
+          gna: parseFloat(cierreResponse.data.gna),
+          gnaNWE: parseFloat(cierreResponse.data.gnanwe),
+          gnaMED: parseFloat(cierreResponse.data.gnamed)
+        };
+
         }
 
         const preciosResponse = await axios.get("https://petroxpertbackend.fly.dev/precios-ciudades-ultimo");
         if (preciosResponse.data && preciosResponse.data.id) {
-          Object.keys(preciosResponse.data).forEach(key => {
-            if (key !== "id" && key !== "created_at") {
-              this.formData.precios[key] = parseFloat(preciosResponse.data[key]);
-            }
-          });
+            this.formData.precios = {
+                gasoilVigo: parseFloat(preciosResponse.data.gasoilvigo),
+                gasolinaFirstVigo: parseFloat(preciosResponse.data.gasolinafirstvigo),
+                gasolinaSecondVigo: parseFloat(preciosResponse.data.gasolinasecondvigo),
+                gasoilHuelva: parseFloat(preciosResponse.data.gasoilhuelva),
+                gasolinaFirstHuelva: parseFloat(preciosResponse.data.gasolinafirsthuelva),
+                gasolinaSecondHuelva: parseFloat(preciosResponse.data.gasolinasecondhuelva),
+                gasoilMerida: parseFloat(preciosResponse.data.gasoilmerida)
+              };
         }
       } catch (error) {
         console.error("❌ Error al obtener los datos de la BD:", error);
