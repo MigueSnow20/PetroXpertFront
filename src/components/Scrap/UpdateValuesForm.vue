@@ -44,21 +44,21 @@ export default {
       formData: {
         cierre: {
           ice: null,
-          deltamed: null,
-          deltanwe: null,
+          deltaMed: null,
+          deltaNWE: null,
           divisa: null,
           gna: null,
-          gnanwe: null,
-          gnamed: null
+          gnaNWE: null,
+          gnaMED: null
         },
         precios: {
-          gasoilvigo: null,
-          gasolinafirstvigo: null,
-          gasolinasecondvigo: null,
-          gasoilhuelva: null,
-          gasolinafirsthuelva: null,
-          gasolinasecondhuelva: null,
-          gasoilmerida: null
+          gasoilVigo: null,
+          gasolinaFirstVigo: null,
+          gasolinaSecondVigo: null,
+          gasoilHuelva: null,
+          gasolinaFirstHuelva: null,
+          gasolinaSecondHuelva: null,
+          gasoilMerida: null
         }
       },
 
@@ -71,21 +71,21 @@ export default {
       // Etiquetas de los campos
       cierreLabels: {
         ice: "ICE Gasóleo",
-        deltamed: "Delta MED",
-        deltanwe: "Delta NWE",
+        deltaMed: "Delta MED",
+        deltaNWE: "Delta NWE",
         divisa: "Divisa",
         gna: "GNA",
-        gnanwe: "GNA NWE",
-        gnamed: "GNA MED"
+        gnaNWE: "GNA NWE",
+        gnaMED: "GNA MED"
       },
       preciosLabels: {
-        gasoilvigo: "Gasoil Vigo",
-        gasolinafirstvigo: "Gasolina 1ª Vigo",
-        gasolinasecondvigo: "Gasolina 2ª Vigo",
-        gasoilhuelva: "Gasoil Huelva",
-        gasolinafirsthuelva: "Gasolina 1ª Huelva",
-        gasolinasecondhuelva: "Gasolina 2ª Huelva",
-        gasoilmerida: "Gasoil Mérida"
+        gasoilVigo: "Gasoil Vigo",
+        gasolinaFirstVigo: "Gasolina 1ª Vigo",
+        gasolinaSecondVigo: "Gasolina 2ª Vigo",
+        gasoilHuelva: "Gasoil Huelva",
+        gasolinaFirstHuelva: "Gasolina 1ª Huelva",
+        gasolinaSecondHuelva: "Gasolina 2ª Huelva",
+        gasoilMerida: "Gasoil Mérida"
       }
     };
   },
