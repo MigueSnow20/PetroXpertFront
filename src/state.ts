@@ -11,7 +11,7 @@ let clock: ReturnType<typeof setInterval> | undefined
 let controller: AbortController | undefined
 let active = false
 // Offline retry before the first successful response; normal cadence comes from the collector configuration.
-let interval = 30000
+let interval = 5000
 
 async function update() {
   controller = new AbortController()
